@@ -7,12 +7,12 @@
 size = Vector2(126, 125)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_onrkg")
 metadata/_edit_group_ = true
 
 [node name="CharacterBody2D" type="CollisionShape2D" parent="."]
-top_level = true
-position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_hqtel")
 debug_color = Color(0.5906, 0.399865, 0.949301, 0.42)
 
