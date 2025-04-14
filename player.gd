@@ -8,7 +8,7 @@ const FRICTION = 600
 var input_vector = Vector2.ZERO
 
 #animation tree (TODO not set up)
-@onready var animationTree : AnimationTree = $AnimationTree 
+#@onready var animationTree : AnimationTree = $AnimationTree 
 
 #States
 enum {
@@ -49,27 +49,30 @@ func move_state(delta):
 	else:
 		velocity += (input_vector * ACCELERATION * delta)	
 		velocity = velocity.limit_length(MAX_SPEED)	
-	
-	
-	move_and_slide() 
+		
+	move_and_slide() 	
 	#current_camera()
 	
+	if Input.is_action_just_pressed("interact"): #"e" pressed
+		#interaction logic
+		pass
+
 	#example change State by pressing "x"
 	#if Input.is_action_just_pressed("x"):
 	#		state = OTHER
 	
-	
-func update_animation_parameters():
+###TODO: Animation Tree blender example setup
+#func update_animation_parameters():
 	#no input
-	if (velocity == Vector2.ZERO):
-		animationTree["parameters/conditions/idle"] = true
-		animationTree["parameters/conditions/is_moving"] = false
+	#if (velocity == Vector2.ZERO):
+		#animationTree["parameters/conditions/idle"] = true
+		#animationTree["parameters/conditions/is_moving"] = false
 	#with input
-	else:
-		animationTree["parameters/conditions/idle"] = false
-		animationTree["parameters/conditions/is_moving"] = true
-	if (input_vector != Vector2.ZERO):
-		animationTree["parameters/Idle/blend_position"] = input_vector
-		animationTree["parameters/Run/blend_position"] = input_vector
-		animationTree["parameters/Attack/blend_position"] = input_vector
-		animationTree["parameters/Jump/blend_position"] = input_vector
+	#else:
+		#animationTree["parameters/conditions/idle"] = false
+		#animationTree["parameters/conditions/is_moving"] = true
+	#if (input_vector != Vector2.ZERO):
+		#animationTree["parameters/Idle/blend_position"] = input_vector
+		#animationTree["parameters/Run/blend_position"] = input_vector
+		#animationTree["parameters/Attack/blend_position"] = input_vector
+		#animationTree["parameters/Jump/blend_position"] = input_vector
