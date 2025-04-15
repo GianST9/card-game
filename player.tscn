@@ -19,4 +19,4 @@ debug_color = Color(0.5906, 0.399865, 0.949301, 0.42)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_i3pqv")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="."]
