@@ -63,7 +63,7 @@ func move_state(delta):
 	
 ###TODO: Animation Tree blender example setup
 #func update_animation_parameters():
-	#no input
+	#no inputs
 	#if (velocity == Vector2.ZERO):
 		#animationTree["parameters/conditions/idle"] = true
 		#animationTree["parameters/conditions/is_moving"] = false
